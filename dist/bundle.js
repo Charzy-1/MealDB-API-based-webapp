@@ -20,23 +20,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/js/dom.js":
-/*!***********************!*\
-  !*** ./src/js/dom.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   displayMeals: () => (/* binding */ displayMeals),\n/* harmony export */   updateLikes: () => (/* binding */ updateLikes)\n/* harmony export */ });\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/js/api.js\");\n// dom.js\r\n\r\n\r\nconst displayMeals = async () => {\r\n  const mealList = document.getElementById('meal-list');\r\n  const meals = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.fetchMeals)('');\r\n  const likes = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.fetchLikes)();\r\n\r\n  meals.forEach((meal) => {\r\n    const mealItem = document.createElement('div');\r\n    mealItem.className = 'meal-item';\r\n\r\n    const mealName = document.createElement('p');\r\n    mealName.textContent = meal.strMeal;\r\n\r\n    const likeButton = document.createElement('img');\r\n    likeButton.src = '../src/img/like-icon.png';\r\n    likeButton.className = 'like-button';\r\n    likeButton.dataset.id = meal.idMeal;\r\n    likeButton.addEventListener('click', async (e) => {\r\n      await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.postLike)(meal.idMeal);\r\n      updateLikes(e.target.dataset.id);\r\n    });\r\n\r\n    mealItem.appendChild(mealName);\r\n    mealItem.appendChild(likeButton);\r\n    mealList.appendChild(mealItem);\r\n  });\r\n};\r\n\r\nconst updateLikes = async (mealId) => {\r\n  const likes = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.fetchLikes)();\r\n  const likeButton = document.querySelector(`img[data-id='${mealId}']`);\r\n  const mealLike = likes.find((like) => like.item_id === mealId);\r\n  likeButton.nextSibling.textContent = mealLike ? mealLike.likes : 0;\r\n};\r\n\n\n//# sourceURL=webpack://mealdb-api-based-webapp/./src/js/dom.js?");
-
-/***/ }),
-
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dom.js */ \"./src/js/dom.js\");\n// index.js\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  (0,_dom_js__WEBPACK_IMPORTED_MODULE_0__.displayMeals)();\r\n});\r\n\n\n//# sourceURL=webpack://mealdb-api-based-webapp/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/js/api.js\");\n\r\n\r\n(0,_api_js__WEBPACK_IMPORTED_MODULE_0__.fetchComments)().then(comments => {\r\n  console.log('Comments:', comments);\r\n});\r\n\n\n//# sourceURL=webpack://mealdb-api-based-webapp/./src/js/index.js?");
 
 /***/ })
 
