@@ -31,10 +31,15 @@ body {
     padding: 20px;
   }
   
+  .second-heading{
+    text-align: center;
+  }
+
   .meal-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
   }
   
   .meal-card {
@@ -151,6 +156,12 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f0f0f0;
   }
   
   
