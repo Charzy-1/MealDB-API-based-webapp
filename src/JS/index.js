@@ -1,10 +1,16 @@
-import { fetchMeals, fetchLikes, postLike } from './api.js';
+// Import CSS file
+import '../public/styles.css';
+
+// Import image using Webpack's file-loader
+import likeIcon from '../src/img/heart.png';
+
+import { fetchMealsByLetter, fetchLikes, postLike } from './api.js';
 
 const mealContainer = document.getElementById('meal-container');
 const mealCountElement = document.getElementById('meal-count');
 
 const displayMeals = async () => {
-  const meals = await fetchMealsByLetter('a');  // Fetch meals by letter 'a' or any other letter/category
+  const meals = await fetchMealsByLetter('a');  // Fetch meals by letter 'a'
   const likes = await fetchLikes();
 
   mealCountElement.textContent = meals.length;
@@ -19,18 +25,18 @@ const displayMeals = async () => {
     mealCard.classList.add('meal-card');
 
     mealCard.innerHTML = `
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-      <div class="meal-info">
-        <h3>${meal.strMeal}</h3>
-        <div class="likes-comments">
-          <div class="like-button" data-id="${meal.idMeal}">
-            <img src="" alt="Like">
-            <span>${likesCount}</span>
-          </div>
-          <button class="comments-button" data-id="${meal.idMeal}">comments</button>
+    <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+    <div class="meal-info">
+      <h3>${meal.strMeal}</h3>
+      <div class="likes-comments">
+        <div class="like-button" data-id="${meal.idMeal}">
+          <img src="${likeIcon}" alt="Like"> <!-- Use the imported image here -->
+          <span>${likesCount}</span>
         </div>
+        <button class="comments-button" data-id="${meal.idMeal}">comments</button>
       </div>
-    `;
+    </div>
+  `;
 
     mealContainer.appendChild(mealCard);
 
