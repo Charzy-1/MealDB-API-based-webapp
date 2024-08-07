@@ -1,10 +1,11 @@
-// dom.js
 import { fetchMeals, fetchLikes, postLike } from './api.js';
 
 export const displayMeals = async () => {
   const mealList = document.getElementById('meal-list');
-  const meals = await fetchMeals('');
+  const meals = await fetchMeals();  // Make sure to call the function
   const likes = await fetchLikes();
+
+  mealList.innerHTML = '';  // Clear the list first
 
   meals.forEach((meal) => {
     const mealItem = document.createElement('div');
@@ -14,7 +15,7 @@ export const displayMeals = async () => {
     mealName.textContent = meal.strMeal;
 
     const likeButton = document.createElement('img');
-    likeButton.src = '../src/img/like-icon.png';
+    likeButton.src = '../src/img/heart.png';  // Update path if necessary
     likeButton.className = 'like-button';
     likeButton.dataset.id = meal.idMeal;
     likeButton.addEventListener('click', async (e) => {

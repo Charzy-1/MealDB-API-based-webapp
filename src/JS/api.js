@@ -1,8 +1,11 @@
-export const fetchMealsByLetter = async (letter) => {
-  const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
+const mealApiUrl = 'https://www.themealdb.com/api/json/v1/1';
+
+export const fetchMeals = async (searchQuery = '') => {
+  const response = await fetch(`${mealApiUrl}/search.php?s=${searchQuery}`);
   const data = await response.json();
-  return data.meals || [];
+  return data.meals ? data.meals.slice(0, 30) : [];
 };
+
 
 export const fetchLikes = async () => {
   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UrgQm7RyKhohgsiKlIZF/likes');
