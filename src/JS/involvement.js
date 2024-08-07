@@ -1,4 +1,4 @@
-const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UrgQm7RyKhohgsiKlIZF/likes';
+const involvementApiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UrgQm7RyKhohgsiKlIZF/comments';
 
 export const fetchComments = async (mealId) => {
   const response = await fetch(`${involvementApiUrl}?item_id=${mealId}`);
