@@ -1,7 +1,4 @@
-// Import CSS file
 import '../../public/styles.css';
-
-// Import image using Webpack's file-loader
 import likeIcon from '../img/heart.png';
 
 import { fetchMeals, fetchLikes, postLike } from './api.js';
@@ -12,7 +9,7 @@ const mealCountElement = document.getElementById('meal-count');
 
 const displayMeals = async () => {
   try {
-    const meals = await fetchMeals();  
+    const meals = await fetchMeals();
     const likes = await fetchLikes();
 
     mealCountElement.textContent = meals.length;
@@ -27,12 +24,12 @@ const displayMeals = async () => {
       mealCard.classList.add('meal-card');
 
       mealCard.innerHTML = `
-        <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" class="meal-image">
         <div class="meal-info">
           <h3>${meal.strMeal}</h3>
           <div class="likes-comments">
             <div class="like-button" data-id="${meal.idMeal}">
-              <img src="${likeIcon}" alt="Like"> <!-- Use the imported variable here -->
+              <img src="${likeIcon}" alt="Like">
               <span>${likesCount}</span>
             </div>
             <button class="comments-button" data-id="${meal.idMeal}">Comments</button>
@@ -49,9 +46,18 @@ const displayMeals = async () => {
         likeButton.querySelector('span').textContent = parseInt(likeButton.querySelector('span').textContent, 10) + 1;
       });
 
+      // Add event listener to the meal image for comments popup
+      const mealImage = mealCard.querySelector('.meal-image');
+      mealImage.addEventListener('click', async () => {
+        console.log(`Meal image clicked: ${meal.strMeal}`);
+        const comments = await fetchComments(meal.idMeal);
+        openCommentsPopup(meal, comments);
+      });
+
       // Add event listener to the comments button
       const commentsButton = mealCard.querySelector('.comments-button');
       commentsButton.addEventListener('click', async () => {
+        console.log(`Comments button clicked: ${meal.strMeal}`);
         const comments = await fetchComments(meal.idMeal);
         openCommentsPopup(meal, comments);
       });
@@ -67,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Implement openCommentsPopup function
 const openCommentsPopup = (meal, comments) => {
+  console.log(`Opening popup for: ${meal.strMeal}`);
+
   // Create popup container
   const popup = document.createElement('div');
   popup.classList.add('popup');
