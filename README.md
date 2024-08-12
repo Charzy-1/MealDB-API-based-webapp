@@ -73,10 +73,14 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-This app shows different meals with their images and names
-I used two apis' one fethching meals and the other for interaction (likes)
-All data regarding the meal api is being fetched by the API
-Likes are being saved, recorded and displayed authomatically.
+  <div>
+    <ol>
+        <li>This app shows different meals with their images and names.</li>
+        <li>I used two apis' one fethching meals and the other for interaction (likes)</li>
+        <li>All data regarding the meal api is being fetched by the API</li>
+        <li>Likes are being saved, recorded and displayed authomatically.</li>
+    </ol>
+  </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,8 +104,8 @@ In order to run this project you need:
  <div>
     <ul>
         <li>Good knowledge on javascript objects</li>
-        <li>VSCode or other text editor installed.<a href="https://code.visualstudio.com/download">Link to download VSCode</a></li>
-         <li>Node package..<a href="https://nodejs.org/en/download/package-manager">Link to Node</a></li>       
+        <li>VSCode or other text editor installed. <a href="https://code.visualstudio.com/download">Link to download VSCode</a></li>
+         <li>Node package. <a href="https://nodejs.org/en/download/package-manager">Link to Node</a></li>       
     </ul>
   </div>
 
