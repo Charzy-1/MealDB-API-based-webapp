@@ -1,5 +1,3 @@
-# MealDB-API-based-webapp
-
 <a name="readme-top"></a>
 
 <!--
@@ -54,142 +52,90 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [MealDB-API-based-webapp] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+**[MealDB-API-based-webapp]** is a webapp that shows different meals and also show their names and neccessary images in relation. It also allows you to add likes to the meal of interest
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
+  <div>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Webpack</li>
+    </ul>
+  </div>
+  
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+This app shows different meals with their images and names
+I used two apis' one fethching meals and the other for interaction (likes)
+All data regarding the meal api is being fetched by the API
+Likes are being saved, recorded and displayed authomatically.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://charzy-1.github.io/MealDB-API-based-webapp/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
+Clone the project using the command:
+https://github.com/Charzy-1/MealDB-API-based-webapp.git
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+ <div>
+    <ul>
+        <li>Good knowledge on javascript objects</li>
+        <li>VSCode or other text editor installed.<a href="https://code.visualstudio.com/download">Link to download VSCode</a></li>
+         <li>Node package..<a href="https://nodejs.org/en/download/package-manager">Link to Node</a></li>       
+    </ul>
+  </div>
 
 ### Setup
 
 Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+1. Use VScode: open terminal in VScode
+2. Navigate to the directory where you want clone the copy of this repository
+3. Create new directory [optional]
+4. Clone the repo using the below command
+ > git clone https://github.com/Charzy-1/MealDB-API-based-webapp.git
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+This project can be used to learn and practice javascript ES6 and Webpack. More specifically;
+* Building a dynamic websites and single page apps.
+* Use ES6 syntax, modules, callbacks and promises.
+* Use webpack.
+* Apply HTML, CSS and JavaScript best practices.
+* Write units tests for a JavaScript app.
+* Follow GitHub flow and Gitflow.
+* Solve git conflicts.
+* Use API documentation to send and receive data from an API.
+* Understand and use JSON.
+* Make JavaScript code asynchronous.
+* Perform a code review for a team member.
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+To run tests, navigate in to the project directory, from GitHub, to test or run the application double click on the index.html file to open in your browser
 
 ### Deployment
 
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+You can deploy this project using github pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,57 +147,53 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Charzy-1)
+- Twitter: [@twitterhandle](https://x.com/CharlyB124?t=DqI9VdevQ1kz7k3u2dOOtQ&s=08)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/charles-adikankwu-50401620b/)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Charzy-1)
+- Twitter: [@twitterhandle](https://x.com/CharlyB124?t=DqI9VdevQ1kz7k3u2dOOtQ&s=08)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/charles-adikankwu-50401620b/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **[popup]**
+- [ ] **[Comments]**
+- [ ] **[Description]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Charzy-1/MealDB-API-based-webapp/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project please give a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+> I would like to thank [Microverseinc](https://github.com/microverseinc) for.
 
-I would like to thank...
+* [Readme-template](https://github.com/basitali111/readme-template-use/tree/main)
+* [Linter for HTML & CSS3 & JavaScript](https://github.com/basitali111/linter-setup?tab=readme-ov-file)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -261,14 +203,7 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
+-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
