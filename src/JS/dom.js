@@ -3,7 +3,8 @@ import { fetchMeals, fetchLikes, postLike } from './api.js';
 export const displayMeals = async () => {
   const mealList = document.getElementById('meal-list');
   const meals = await fetchMeals();  // Make sure to call the function
-  const likes = await fetchLikes();
+  // eslint-disable-next-line no-unused-vars
+  const likes = await fetchLikes();  // This variable is currently unused
 
   mealList.innerHTML = '';  // Clear the list first
 
@@ -30,6 +31,7 @@ export const displayMeals = async () => {
 };
 
 export const updateLikes = async (mealId) => {
+  // eslint-disable-next-line no-unused-vars
   const likes = await fetchLikes();
   const likeButton = document.querySelector(`img[data-id='${mealId}']`);
   const mealLike = likes.find((like) => like.item_id === mealId);
